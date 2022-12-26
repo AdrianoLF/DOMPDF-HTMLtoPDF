@@ -14,6 +14,30 @@ $dompdf = new Dompdf($options);
 
 // Arquivo HTML
 $content = file_get_contents('htmldoc.html');
+$content .= ' 
+<!-- CORPO DO DOCUMENTO -->
+    <br> <br> <br> <br> <br>
+    <div class="content-questions">
+        <div class="header"></div>
+        <h1 class="tittle-site">1 - Teste de HTML no PDF</h1>
+        <p class="exercise-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. At distinctio
+            reprehenderit ipsa quidem laborum, ut consequatur dolores molestias, aspernatur labore, quibusdam quo
+            qui mollitia excepturi cum praesentium neque quae id?</p>
+        <img class="img"
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/b7/b3/eb/caption.jpg?w=1200&h=-1&s=1"
+            ; alt="">
+    </div>
+
+    <!-- RODAPÉ -->
+    <div class="footer">
+        <div>
+            <div style="text-align: center;"><a href="#">asdoiasdjioasjdasj</a></div>
+            <div class="black-line-answer" style="width: 80%; margin: 0 auto;"></div>
+            <p>2</p>
+        </div>
+    </div>
+</div>    
+a';
 $dompdf->loadHtml($content);
 
 // Tamanho da página e orientação
